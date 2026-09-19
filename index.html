@@ -6,9 +6,22 @@
   <meta name="theme-color" content="#020609">
   <meta name="description" content="KIRILL // CREATOR — портфолио видеомонтажёра Кирилла.">
   <title>KIRILL // CREATOR — Video Editor</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260917-about-detail">
 </head>
-<body>
+<body class="is-hero-active">
+  <div class="global-ambient-light" aria-hidden="true"></div>
+  <div class="cursor-ambient-light" aria-hidden="true"></div>
+  <div class="cinematic-depth-layer" aria-hidden="true">
+    <div class="depth-haze"></div>
+    <div class="depth-plane depth-plane--far" data-depth-plane="far"></div>
+    <div class="depth-plane depth-plane--middle" data-depth-plane="middle"></div>
+    <div class="depth-plane depth-plane--near" data-depth-plane="near"></div>
+    <div class="depth-technical-lines"></div>
+    <div class="depth-streaks">
+      <i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
   <main class="site-shell">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="ambient-glow" aria-hidden="true"></div>
@@ -84,7 +97,7 @@
               <span>ПОСМОТРЕТЬ РАБОТЫ</span>
               <svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10h10m-4-4 4 4-4 4"/></svg>
             </a>
-            <a class="button button--secondary" href="#contact">
+            <a class="button button--secondary" href="https://t.me/kirill_filunin" target="_blank" rel="noopener noreferrer">
               <span>ОБСУДИТЬ ПРОЕКТ</span>
               <svg class="ui-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10h10m-4-4 4 4-4 4"/></svg>
             </a>
@@ -97,7 +110,7 @@
             <div class="portrait-placeholder" aria-hidden="true">
               <span></span>
             </div>
-            <img src="assets/kirill-portrait-creator.jpg" alt="Портрет видеомонтажёра Кирилла" draggable="false">
+            <img src="assets/kirill-hero-new.jpg" alt="Портрет видеомонтажёра Кирилла" draggable="false">
             <figcaption class="portrait-status">PORTRAIT / KIRILL</figcaption>
           </figure>
           <div class="portrait-line" aria-hidden="true"></div>
@@ -111,8 +124,559 @@
 
       <div class="corner-code entrance" aria-hidden="true" style="--delay: 880ms">KF / 001<br>55.7558° N</div>
     </section>
+
+    <section class="selected-works" id="work" aria-labelledby="works-title">
+      <div class="works-glow" aria-hidden="true"></div>
+
+      <header class="works-header">
+        <p class="works-kicker reveal motion-label"><span></span>02 / SELECTED WORKS</p>
+        <h2 class="reveal motion-heading" id="works-title">
+          <span>ИЗБРАННЫЕ</span>
+          <span class="works-title-accent">РАБОТЫ</span>
+        </h2>
+        <p class="reveal motion-description">Монтаж, который удерживает внимание,<br>усиливает подачу и помогает контенту работать.</p>
+      </header>
+
+      <nav class="works-filter reveal" aria-label="Фильтр проектов">
+        <button class="is-active" type="button" data-filter="all" aria-pressed="true">ВСЕ</button>
+        <button type="button" data-filter="reels-shorts" aria-pressed="false">REELS</button>
+        <button type="button" data-filter="ai-video" aria-pressed="false">AI VIDEO</button>
+        <button type="button" data-filter="before-after" aria-pressed="false">ДО / ПОСЛЕ</button>
+        <button type="button" data-filter="ugc" aria-pressed="false">UGC</button>
+      </nav>
+
+      <article class="featured-stage featured-project-stage reveal" id="featured-stage" role="button" tabindex="0" aria-live="polite" aria-label="Открыть избранный проект" hidden>
+        <div class="featured-stage__surface">
+          <div class="featured-stage__media">
+            <video class="featured-stage__video portfolio-managed-video" playsinline preload="metadata" controlslist="nofullscreen" aria-label="Главное превью выбранного проекта"></video>
+            <div class="featured-stage__placeholder" aria-hidden="true"></div>
+            <div class="featured-stage__chrome" aria-hidden="true">
+              <span>FEATURED PREVIEW</span>
+              <span data-featured-index></span>
+            </div>
+            <button class="portfolio-fullscreen-trigger" type="button" aria-label="Открыть видео на весь экран" data-portfolio-fullscreen-trigger>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>
+            </button>
+          </div>
+          <div class="featured-stage__info">
+            <p class="featured-stage__category" data-featured-category></p>
+            <p class="featured-stage__description" data-featured-description></p>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-showcase all-projects-grid" aria-live="polite">
+        <article class="project-card project-card--reels reveal" data-category="reels-shorts" data-description="Динамичный монтаж короткого вертикального видео." role="button" tabindex="0" aria-label="Открыть работу REELS">
+          <div class="project-card__meta">
+            <span>REELS</span>
+            <span>01</span>
+          </div>
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/reels-01.mp4" autoplay muted playsinline preload="metadata" aria-label="Превью работы REELS"></video>
+            <div class="project-media__chrome" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 20 20"><path d="M4.5 10h10m-4-4 4 4-4 4"/></svg>
+            </div>
+          </div>
+          <h3>REELS</h3>
+        </article>
+
+        <article class="project-card project-card--ai reveal" data-category="ai-video" data-description="Экспериментальная AI-визуализация, собранная в цельную кинематографичную историю." role="button" tabindex="0" aria-label="Открыть работу AI-видео">
+          <div class="project-card__meta">
+            <span>AI-ВИДЕО</span>
+            <span>02</span>
+          </div>
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/ai-video-01.mp4" autoplay muted playsinline preload="metadata" aria-label="Превью работы AI-видео"></video>
+            <div class="project-media__chrome" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 20 20"><path d="M4.5 10h10m-4-4 4 4-4 4"/></svg>
+            </div>
+          </div>
+          <h3>AI-ВИДЕО</h3>
+        </article>
+
+        <article class="project-card project-card--before-after reveal" data-category="before-after" data-description="Монтаж и визуальное сравнение результата до и после." role="button" tabindex="0" aria-label="Открыть работу До / После">
+          <div class="project-card__meta">
+            <span>ДО / ПОСЛЕ</span>
+            <span>04</span>
+          </div>
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/before-after-01.mp4" autoplay muted playsinline preload="metadata" aria-label="Превью сравнения До / После"></video>
+            <div class="project-media__chrome" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 20 20"><path d="M4.5 10h10m-4-4 4 4-4 4"/></svg>
+            </div>
+          </div>
+          <h3>ДО / ПОСЛЕ</h3>
+        </article>
+
+        <article class="project-card project-card--ugc reveal" data-category="ugc" data-description="Динамичный монтаж UGC-контента для социальных сетей." role="button" tabindex="0" aria-label="Открыть работу UGC">
+          <div class="project-card__meta">
+            <span>UGC</span>
+            <span>05</span>
+          </div>
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/ugc-01.mp4" autoplay muted playsinline preload="metadata" aria-label="Превью работы UGC"></video>
+            <div class="project-media__chrome" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 20 20"><path d="M4.5 10h10m-4-4 4 4-4 4"/></svg>
+            </div>
+          </div>
+          <h3>UGC</h3>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="tools-section" id="tools" aria-labelledby="tools-title" data-active-tool="">
+      <svg class="tools-symbols" aria-hidden="true">
+        <defs>
+          <symbol id="icon-capcut" viewBox="0 0 24 24">
+            <path d="M5 6.5h14l-5 5.5 5 5.5H5l5-5.5-5-5.5Z"/>
+          </symbol>
+          <symbol id="icon-kling" viewBox="0 0 24 24">
+            <path d="M18.5 6.5a7.4 7.4 0 0 0-10.7-.2l-2.3 2.4a4.7 4.7 0 0 0 6.7 6.6l2.2-2.2"/>
+            <path d="M5.5 17.5a7.4 7.4 0 0 0 10.7.2l2.3-2.4a4.7 4.7 0 0 0-6.7-6.6L9.6 10.9"/>
+          </symbol>
+          <symbol id="icon-chatgpt" viewBox="0 0 24 24">
+            <path d="M12 4.1a4 4 0 0 1 7 2.6 4 4 0 0 1 .7 6.9 4 4 0 0 1-4.2 5.8 4 4 0 0 1-7-.1 4 4 0 0 1-4.2-5.8A4 4 0 0 1 5 6.6 4 4 0 0 1 12 4.1Z"/>
+            <path d="m8.2 8.1 7.6 4.4v4.1M15.8 8.1l-7.6 4.4v4.1M12 5.6v8.8"/>
+          </symbol>
+          <symbol id="icon-syntax" viewBox="0 0 24 24">
+            <path d="m8.5 6.5-5 5.5 5 5.5M15.5 6.5l5 5.5-5 5.5M14 4.5l-4 15"/>
+          </symbol>
+        </defs>
+      </svg>
+
+      <div class="tools-ambient" aria-hidden="true"></div>
+      <div class="tools-rail" aria-hidden="true"><b></b><span>03</span><i></i><small>55.75 / 37.61</small></div>
+
+      <div class="tools-layout">
+        <header class="tools-header">
+          <p class="tools-kicker reveal"><span></span>03 / TOOLS</p>
+          <h2 class="reveal" id="tools-title">МОИ <em>ИНСТРУМЕНТЫ</em></h2>
+          <p class="tools-subtitle reveal">Инструменты, с которыми идея становится кадром.</p>
+        </header>
+
+        <div class="tools-visual reveal">
+          <div class="tools-eye-frame">
+            <div class="tools-eye-image" role="img" aria-label="Кинематографичный крупный план глаза с холодным синим светом"></div>
+            <div class="tools-eye-scan" aria-hidden="true"></div>
+            <div class="eye-tool-icons" aria-hidden="true">
+              <span class="eye-tool-icon" data-tool="capcut"><svg><use href="#icon-capcut"/></svg></span>
+              <span class="eye-tool-icon" data-tool="kling"><svg><use href="#icon-kling"/></svg></span>
+              <span class="eye-tool-icon" data-tool="chatgpt"><svg><use href="#icon-chatgpt"/></svg></span>
+              <span class="eye-tool-icon" data-tool="syntax"><svg><use href="#icon-syntax"/></svg></span>
+            </div>
+          </div>
+          <div class="tools-visual-code" aria-hidden="true">VISION / KF<br>FRAME 03.01</div>
+        </div>
+
+        <div class="tools-list" aria-label="Инструменты Кирилла">
+          <article class="tool-card reveal" data-tool="capcut">
+            <span class="tool-card__icon"><svg><use href="#icon-capcut"/></svg></span>
+            <span class="tool-card__body"><strong>CAPCUT</strong><span>Монтаж, динамика, субтитры<br>и финальная сборка</span></span>
+          </article>
+
+          <article class="tool-card reveal" data-tool="kling">
+            <span class="tool-card__icon"><svg><use href="#icon-kling"/></svg></span>
+            <span class="tool-card__body"><strong>KLING AI</strong><span>AI-анимация, движение<br>и кинематографичные сцены</span></span>
+          </article>
+
+          <article class="tool-card reveal" data-tool="chatgpt">
+            <span class="tool-card__icon"><svg><use href="#icon-chatgpt"/></svg></span>
+            <span class="tool-card__body"><strong>CHATGPT</strong><span>Идеи, сценарии и точная<br>проработка концепции</span></span>
+          </article>
+
+          <article class="tool-card reveal" data-tool="syntax">
+            <span class="tool-card__icon"><svg><use href="#icon-syntax"/></svg></span>
+            <span class="tool-card__body"><strong>SYNTAX AI</strong><span>AI-инструменты для создания<br>и обработки контента</span></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services" aria-labelledby="services-title">
+      <div class="services-ambient" aria-hidden="true"></div>
+      <div class="services-tech" aria-hidden="true"><span>04</span><i></i><b></b><small>SERVICE SYSTEM / KF</small></div>
+
+      <div class="services-layout">
+        <header class="services-header">
+          <p class="services-kicker reveal motion-label"><span></span>04 / SERVICES</p>
+          <h2 class="reveal motion-heading" id="services-title"><span>ЧТО ВХОДИТ</span><span>В <em>МОНТАЖ</em></span></h2>
+          <p class="services-subtitle reveal motion-description">Полный цикл работы — от сырого материала до готового ролика.</p>
+          <div class="services-process" aria-label="Процесс создания ролика">
+            <ol class="services-process__steps">
+              <li class="services-process__step">
+                <span class="services-process__number">01</span>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="7" width="22" height="18" rx="3"/><path d="M10 7v18M22 7v18M5 13h5m-5 6h5m12-6h5m-5 6h5"/></svg>
+                <strong>СЫРОЙ МАТЕРИАЛ</strong>
+              </li>
+              <li class="services-process__step">
+                <span class="services-process__number">02</span>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 10h22M5 16h22M5 22h22M11 8v4m9 2v4m-5 2v4"/><circle cx="11" cy="10" r="2"/><circle cx="20" cy="16" r="2"/><circle cx="15" cy="22" r="2"/></svg>
+                <strong>МОНТАЖ И РИТМ</strong>
+              </li>
+              <li class="services-process__step">
+                <span class="services-process__number">03</span>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="20" rx="4"/><path d="m13 11 8 5-8 5z"/></svg>
+                <strong>ГОТОВЫЙ РОЛИК</strong>
+              </li>
+            </ol>
+            <p>От исходников до готового видео — каждый этап работает на внимание зрителя.</p>
+          </div>
+        </header>
+
+        <div class="services-grid">
+        <article class="service-card service-card--cut reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-editing.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>01</span><i>EDIT / RHYTHM</i></div>
+          <svg class="service-card__icon service-icon--scissors" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="8" cy="9" r="3.5"/><circle cx="8" cy="23" r="3.5"/>
+            <path class="blade blade--top" d="m11 11 15-7"/><path class="blade blade--bottom" d="m11 21 15 7"/><path d="m12 13 7 3-7 3"/>
+          </svg>
+          <div class="service-card__copy"><h3>ДИНАМИЧНАЯ СКЛЕЙКА</h3><p>Темп, ритм и структура,<br>которые удерживают внимание.</p></div>
+        </article>
+
+        <article class="service-card service-card--captions reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-subtitles.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>02</span><i>TEXT / CAPTIONS</i></div>
+          <svg class="service-card__icon service-icon--captions" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="4.5" y="6" width="23" height="20" rx="5"/><path class="caption-line" d="M9 13h6M18 13h5M9 19h5M17 19h6"/>
+          </svg>
+          <div class="service-card__copy"><h3>СУБТИТРЫ</h3><p>Чистая типографика и акценты<br>для просмотра без звука.</p></div>
+        </article>
+
+        <article class="service-card service-card--sound reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-audio.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>03</span><i>AUDIO / SFX</i></div>
+          <svg class="service-card__icon service-icon--wave" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M5 16v-3M9.5 16V9M14 16V5M18 16V8M22.5 16v-5M27 16v-2M5 16v3M9.5 16v7M14 16v11M18 16v8M22.5 16v5M27 16v2"/>
+          </svg>
+          <div class="service-card__copy"><h3>МУЗЫКА И ЗВУКОВЫЕ ЭФФЕКТЫ</h3><p>Музыка, атмосфера и детали,<br>которые усиливают каждый кадр.</p></div>
+        </article>
+
+        <article class="service-card service-card--color reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-color.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>04</span><i>COLOR / TONE</i></div>
+          <svg class="service-card__icon service-icon--sliders" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M5 9h22M5 16h22M5 23h22"/><circle class="slider-dot slider-dot--one" cx="12" cy="9" r="2.5"/><circle class="slider-dot slider-dot--two" cx="21" cy="16" r="2.5"/><circle class="slider-dot slider-dot--three" cx="15" cy="23" r="2.5"/>
+          </svg>
+          <div class="service-card__copy"><h3>ЦВЕТОКОРРЕКЦИЯ</h3><p>Единый тон, настроение<br>и аккуратная работа с цветом.</p></div>
+        </article>
+
+        <article class="service-card service-card--motion reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-motion.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>05</span><i>MOTION / DESIGN</i></div>
+          <svg class="service-card__icon service-icon--motion" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="14" cy="18" r="8"/><path class="motion-spark" d="M23 5v6M20 8h6M24.5 15l1.5 1.5M7 5l2 2"/>
+          </svg>
+          <div class="service-card__copy"><h3>ГРАФИКА И АНИМАЦИЯ</h3><p>Акценты, инфографика и motion,<br>которые поддерживают подачу.</p></div>
+        </article>
+
+        <article class="service-card service-card--ai reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-ai.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>06</span><i>AI / GENERATION</i></div>
+          <svg class="service-card__icon service-icon--ai" viewBox="0 0 32 32" aria-hidden="true">
+            <path class="ai-star ai-star--main" d="M14 4c.5 6 3.5 9 9 10-5.5 1-8.5 4-9 10-.5-6-3.5-9-9-10 5.5-1 8.5-4 9-10Z"/><path class="ai-star ai-star--small" d="M25 4c.2 2.7 1.5 4 4 4.5-2.5.5-3.8 1.8-4 4.5-.2-2.7-1.5-4-4-4.5 2.5-.5 3.8-1.8 4-4.5Z"/>
+          </svg>
+          <div class="service-card__copy"><h3>AI-ГЕНЕРАЦИИ</h3><p>Дополнительные сцены и образы,<br>когда обычного кадра недостаточно.</p></div>
+        </article>
+
+        <article class="service-card service-card--platforms reveal">
+          <div class="service-card__visual" aria-hidden="true"><img src="assets/services/service-platforms.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="service-card__top"><span>07</span><i>FORMAT / DELIVERY</i></div>
+          <svg class="service-card__icon service-icon--screens" viewBox="0 0 32 32" aria-hidden="true">
+            <rect class="screen screen--back" x="4" y="7" width="18" height="14" rx="3"/><rect class="screen screen--front" x="10" y="11" width="18" height="14" rx="3"/>
+          </svg>
+          <div class="service-card__copy"><h3>АДАПТАЦИЯ ПОД ПЛОЩАДКИ</h3><p>Форматы, хронометраж и версии<br>под требования каждой платформы.</p></div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section" id="why-me" aria-labelledby="why-title">
+      <div class="why-ambient" aria-hidden="true"></div>
+      <div class="why-marker" aria-hidden="true"><b></b><span>05</span><i></i><small>TRUST / SYSTEM</small></div>
+
+      <header class="why-header">
+        <p class="why-kicker reveal motion-label"><span></span>05 / WHY ME</p>
+        <h2 class="reveal motion-heading" id="why-title"><span>ПОЧЕМУ СТОИТ</span><span>РАБОТАТЬ СО <em>МНОЙ</em></span></h2>
+      </header>
+
+      <div class="why-grid">
+        <div class="why-statement reveal motion-statement" aria-label="Каждый кадр — повод смотреть дальше">
+          <div class="why-statement__code">KF / PRINCIPLE 01</div>
+          <p class="why-statement__lead">КАЖДЫЙ КАДР —</p>
+          <p class="why-statement__main"><span>ПОВОД</span><em>СМОТРЕТЬ ДАЛЬШЕ</em></p>
+          <p class="why-statement__description">Не просто собираю кадры —<br>выстраиваю ритм, динамику и подачу так,<br>чтобы ролик хотелось досмотреть.</p>
+        </div>
+
+        <div class="why-benefits" aria-label="Преимущества работы со мной">
+          <article class="advantage-card advantage-card--experience why-glass reveal">
+            <div class="advantage-card__media" aria-hidden="true"><img src="assets/why/why-experience.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="advantage-card__top"><small>01 / EXPERIENCE</small></div>
+            <div class="advantage-card__copy"><h3>БОЛЬШОЙ ОПЫТ РАБОТЫ</h3><p>Понимаю специфику короткого контента и динамичного монтажа.</p></div>
+          </article>
+
+          <article class="advantage-card advantage-card--short why-glass reveal">
+            <div class="advantage-card__media" aria-hidden="true"><img src="assets/why/why-retention.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="advantage-card__top"><small>02 / RETENTION</small></div>
+            <div class="advantage-card__copy"><h3>ФОКУС НА УДЕРЖАНИИ</h3><p>Каждый монтажный приём работает на внимание зрителя.</p></div>
+          </article>
+
+          <article class="advantage-card advantage-card--deadlines why-glass reveal">
+            <div class="advantage-card__media" aria-hidden="true"><img src="assets/why/why-deadlines.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="advantage-card__top"><small>03 / DEADLINES</small></div>
+            <div class="advantage-card__copy"><h3>СОБЛЮДАЮ СРОКИ</h3><p>Заранее согласовываю сроки и придерживаюсь договорённостей.</p></div>
+          </article>
+
+          <article class="advantage-card advantage-card--contact why-glass reveal">
+            <div class="advantage-card__media" aria-hidden="true"><img src="assets/why/why-contact.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="advantage-card__top"><small>04 / CONTACT</small></div>
+            <div class="advantage-card__copy"><h3>ВСЕГДА НА СВЯЗИ</h3><p>Понятная коммуникация на каждом этапе работы.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-tech" aria-hidden="true"><b></b><span>06</span><i></i><small>FORMAT / VALUE</small></div>
+
+      <div class="pricing-layout">
+        <header class="pricing-header">
+          <p class="pricing-kicker reveal motion-label"><span></span>06 / SERVICES</p>
+          <h2 class="reveal motion-heading" id="pricing-title"><span>ПАКЕТЫ</span><span><em>УСЛУГ</em></span></h2>
+          <p class="pricing-subtitle reveal motion-description">Выберите подходящий формат под задачу и объём контента</p>
+          <div class="pricing-perks" aria-label="Преимущества работы">
+            <div class="pricing-perk">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 3 7 18h8l-1 11 11-16h-8l1-10Z"/></svg>
+              <div><strong>БЫСТРО</strong><span>Чёткие сроки<br>и понятный процесс</span></div>
+            </div>
+            <div class="pricing-perk">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="1"/></svg>
+              <div><strong>ИНДИВИДУАЛЬНО</strong><span>Подбираю под ваш<br>формат и цели</span></div>
+            </div>
+            <div class="pricing-perk">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 13 13-13 13L3 16 16 3Z"/><path d="m10 16 4 4 8-8"/></svg>
+              <div><strong>КАЧЕСТВЕННО</strong><span>Монтаж, который<br>удерживает</span></div>
+            </div>
+            <div class="pricing-perk">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 6h18a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H14l-8 5v-5a3 3 0 0 1-3-3V9a3 3 0 0 1 4-3Z"/><path d="M10 13h12M10 18h8"/></svg>
+              <div><strong>НА СВЯЗИ</strong><span>Ответы и правки<br>без задержек</span></div>
+            </div>
+          </div>
+          <p class="pricing-quote"><span aria-hidden="true">“</span>ХОРОШИЙ КОНТЕНТ<br>РАБОТАЕТ НА ВАС 24/7</p>
+          <div class="pricing-workspace" aria-hidden="true"><img src="assets/images/pricing-workspace.webp" alt="" loading="lazy" decoding="async"></div>
+        </header>
+
+        <div class="pricing-content">
+          <div class="pricing-grid">
+        <article class="pricing-card pricing-glass reveal" tabindex="0">
+          <div class="pricing-card__visual" aria-hidden="true"><img src="assets/images/pricing-basic-edit.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="pricing-card__top">
+            <span>01 / BASIC</span>
+            <svg class="pricing-card__icon" viewBox="0 0 40 40" aria-hidden="true">
+              <circle cx="11" cy="12" r="4"/><circle cx="11" cy="28" r="4"/>
+              <path d="m15 14 18-8M15 26l18 8M17 17l8 3-8 3"/>
+            </svg>
+          </div>
+
+          <div class="pricing-card__intro">
+            <h3>БАЗОВЫЙ МОНТАЖ</h3>
+            <p>Простая склейка + субтитры<br>Видео до 1 минуты</p>
+          </div>
+
+          <div class="pricing-card__price">
+            <strong>ОТ 1 000 ₽</strong>
+            <span>за 1 видео</span>
+          </div>
+
+          <div class="pricing-package">
+            <div><small>ПАКЕТ</small><strong>10 ВИДЕО</strong></div>
+            <div class="pricing-package__value"><strong>8 000 ₽</strong><span>ЭКОНОМИЯ 2 000 ₽</span></div>
+          </div>
+
+          <ul class="pricing-features" aria-label="Что входит в базовый монтаж">
+            <li>простая склейка</li>
+            <li>субтитры</li>
+            <li>видео до 1 минуты</li>
+          </ul>
+
+        </article>
+
+        <article class="pricing-card pricing-glass reveal" tabindex="0">
+          <div class="pricing-card__visual" aria-hidden="true"><img src="assets/images/pricing-dynamic-edit.webp" alt="" loading="lazy" decoding="async"></div>
+          <div class="pricing-card__top">
+            <span>02 / DYNAMIC</span>
+            <svg class="pricing-card__icon" viewBox="0 0 40 40" aria-hidden="true">
+              <rect x="6" y="8" width="28" height="24" rx="6"/><path d="m17 14 10 6-10 6Z"/>
+              <path d="M9 5v4M31 31v4M3 20h4M33 20h4"/>
+            </svg>
+          </div>
+
+          <div class="pricing-card__intro">
+            <h3>ДИНАМИЧНЫЙ МОНТАЖ</h3>
+            <p>Склейка + динамика + субтитры + B-roll<br>Видео до 1 минуты</p>
+          </div>
+
+          <div class="pricing-card__price">
+            <strong>ОТ 3 500 ₽</strong>
+            <span>за 1 видео</span>
+          </div>
+
+          <div class="pricing-package">
+            <div><small>ПАКЕТ</small><strong>10 ВИДЕО</strong></div>
+            <div class="pricing-package__value"><strong>30 000 ₽</strong><span>ЭКОНОМИЯ 5 000 ₽</span></div>
+          </div>
+
+          <ul class="pricing-features" aria-label="Что входит в динамичный монтаж">
+            <li>динамичная склейка</li>
+            <li>субтитры</li>
+            <li>B-roll</li>
+            <li>работа с темпом и динамикой</li>
+            <li>видео до 1 минуты</li>
+          </ul>
+
+        </article>
+          </div>
+
+          <aside class="pricing-custom pricing-glass reveal" aria-labelledby="pricing-custom-title">
+            <div class="pricing-custom__copy">
+              <small>CUSTOM / AI</small>
+              <h3 id="pricing-custom-title">НУЖЕН СЛОЖНЫЙ МОНТАЖ?</h3>
+              <p>AI-генерации, сложная графика, нестандартная анимация или несколько версий ролика рассчитываются индивидуально</p>
+            </div>
+            <div class="pricing-custom__visual" aria-hidden="true"><img src="assets/images/pricing-ai.webp" alt="" loading="lazy" decoding="async"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="about-ambient" aria-hidden="true"></div>
+      <div class="about-ghost" aria-hidden="true">CREATOR</div>
+      <div class="about-coordinate about-coordinate--top" aria-hidden="true">X07 / 55.75</div>
+      <div class="about-coordinate about-coordinate--bottom" aria-hidden="true">BEHIND / FRAME</div>
+
+      <div class="about-layout">
+        <p class="about-kicker reveal motion-label"><span></span>07 / ABOUT</p>
+
+        <h2 class="about-title reveal motion-heading" id="about-title">
+          <span>ОБО <em>МНЕ</em></span>
+        </h2>
+
+        <figure class="about-media reveal">
+          <div class="about-media__image">
+            <img src="assets/kirill-about-backstage-clean.png" alt="Кирилл за монтажным столом" loading="lazy" decoding="async">
+          </div>
+          <div class="about-media__rail" aria-hidden="true">
+            <span>07</span>
+            <b></b>
+          </div>
+          <p class="about-media__label" aria-hidden="true">ABOUT / CREATOR</p>
+          <p class="about-media__vertical" aria-hidden="true">BEHIND THE FRAME / 2026</p>
+        </figure>
+
+        <div class="about-copy reveal motion-description">
+          <p>Я Кирилл — видеомонтажёр и creator.</p>
+          <p>Работаю с коротким видеоконтентом, рекламными,<br class="about-desktop-break"> экспертными и AI-роликами.</p>
+          <p>Для меня монтаж — это не просто склейка кадров.<br class="about-desktop-break"> Это ритм, визуальная подача и управление вниманием зрителя.</p>
+
+          <ul class="about-benefits" aria-label="Подход к работе">
+            <li class="about-benefit">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 2.4 8.6L27 14l-8.6 2.4L16 25l-2.4-8.6L5 14l8.6-2.4L16 3Z"/><path d="m25 23 .8 2.2L28 26l-2.2.8L25 29l-.8-2.2L22 26l2.2-.8L25 23Z"/></svg>
+              <strong>КРЕАТИВНЫЙ ПОДХОД</strong>
+              <span>Ищу решения, а не шаблоны</span>
+            </li>
+            <li class="about-benefit">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/><path d="M16 2v6m0 16v6M2 16h6m16 0h6"/></svg>
+              <strong>ВНИМАНИЕ К ДЕТАЛЯМ</strong>
+              <span>Продумываю каждый кадр</span>
+            </li>
+            <li class="about-benefit">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="13" r="4"/><circle cx="22" cy="13" r="4"/><path d="M3 27c0-5 3-8 8-8s8 3 8 8M17 20c1.3-.7 2.8-1 5-1 4.3 0 7 3 7 8"/></svg>
+              <strong>ПОНИМАЮ АУДИТОРИЮ</strong>
+              <span>Делаю контент, который смотрят</span>
+            </li>
+            <li class="about-benefit">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16h20m-8-8 8 8-8 8"/><path d="m7 6 2 2m-2 18 2-2"/></svg>
+              <strong>ОТКРЫТ К НОВЫМ ИДЕЯМ</strong>
+              <span>Всегда на связи и готов к задачам</span>
+            </li>
+          </ul>
+
+          <blockquote class="about-quote">
+            <span class="about-quote__mark" aria-hidden="true">“</span>
+            <strong>ХОРОШИЙ ВИДЕОКОНТЕНТ<br>ЗАМЕТНО ВЛИЯЕТ НА ЛЮДЕЙ,<br>БРЕНДЫ И РЕЗУЛЬТАТЫ.</strong>
+            <span class="about-quote__index" aria-hidden="true">МОНТАЖ<br>ИДЕИ<br>ЛЮДИ<br>РАЗВИТИЕ</span>
+          </blockquote>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title" data-motion-section>
+      <div class="contact-ambient" aria-hidden="true"></div>
+      <div class="contact-tech contact-tech--top" aria-hidden="true"><span>08</span><b></b><i></i></div>
+      <div class="contact-coordinate" aria-hidden="true">FINAL / CONNECTION / 2026</div>
+
+      <div class="contact-layout">
+        <div class="contact-lead">
+          <p class="contact-kicker reveal motion-label" data-reveal><span></span>08 / CONTACT</p>
+
+          <h2 class="contact-title reveal motion-heading" id="contact-title" data-reveal>
+            <span class="contact-title__question">ЕСТЬ ПРОЕКТ?</span>
+            <span>ДАВАЙТЕ</span>
+            <span>СДЕЛАЕМ ЕГО</span>
+            <span><em>СИЛЬНЕЕ</em></span>
+          </h2>
+        </div>
+
+        <div class="contact-action">
+          <p class="contact-description reveal motion-description" data-reveal>Расскажите о задаче — обсудим идею,<br>формат и то, как можно реализовать её в видео.</p>
+
+          <a class="button button--secondary contact-cta reveal" href="https://t.me/kirill_filunin" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span>НАПИСАТЬ В TELEGRAM</span>
+            <svg class="ui-icon contact-cta__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14 14 6m-6 0h6v6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <footer class="contact-footer reveal" data-reveal>
+        <p>KIRILL <i>//</i> CREATOR</p>
+        <p>VIDEO EDITOR / 2026</p>
+        <p>© 2026 KIRILL // CREATOR</p>
+      </footer>
+    </section>
+
+    <div class="project-viewer" id="project-viewer" aria-hidden="true" inert>
+      <div class="project-viewer__backdrop" data-viewer-close></div>
+      <article class="project-viewer__dialog" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+        <button class="project-viewer__close" type="button" aria-label="Закрыть просмотр проекта" data-viewer-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11m0-11-11 11"/></svg>
+        </button>
+        <div class="project-viewer__media">
+          <video class="project-viewer__video portfolio-managed-video" controls muted playsinline preload="metadata" controlslist="nofullscreen"></video>
+          <div class="project-viewer__placeholder" aria-hidden="true"><span>KF</span></div>
+          <button class="portfolio-fullscreen-trigger" type="button" aria-label="Открыть видео на весь экран" data-portfolio-fullscreen-trigger>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>
+          </button>
+        </div>
+        <div class="project-viewer__info">
+          <p id="viewer-category">PROJECT</p>
+          <h3 id="viewer-title">PROJECT TITLE</h3>
+          <p id="viewer-description"></p>
+        </div>
+      </article>
+    </div>
   </main>
 
-  <script src="script.js"></script>
+  <div class="portfolio-fullscreen" id="portfolio-fullscreen" role="dialog" aria-modal="true" aria-label="Полноэкранный просмотр видео" aria-hidden="true" hidden>
+    <div class="portfolio-fullscreen__ambient" aria-hidden="true"></div>
+    <div class="portfolio-fullscreen__stage" data-portfolio-fullscreen-stage></div>
+    <button class="portfolio-fullscreen__close" type="button" aria-label="Закрыть полноэкранный просмотр" data-portfolio-fullscreen-close>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11m0-11-11 11"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js?v=20260909-portfolio-http-fix"></script>
 </body>
 </html>
