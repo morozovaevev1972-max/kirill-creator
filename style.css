@@ -8371,3 +8371,175 @@ body.portfolio-fullscreen-open {
     display: none;
   }
 }
+
+/* Published mobile QA: typography and lightweight reveal only. */
+@media (max-width: 768px) {
+  html:not(.reveal-observer-active) .reveal {
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+  }
+
+  .services-grid .service-card.reveal,
+  .why-benefits .advantage-card.reveal,
+  .pricing-section .pricing-card.reveal,
+  .pricing-section .pricing-custom.reveal {
+    opacity: 0;
+    clip-path: none !important;
+    filter: none !important;
+    transform: translate3d(0, 14px, 0);
+    transition-property: opacity, transform;
+    transition-duration: 850ms, 850ms;
+    transition-timing-function: cubic-bezier(.22, 1, .36, 1), cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .services-grid .service-card.reveal,
+  .pricing-section .pricing-card.reveal,
+  .pricing-section .pricing-custom.reveal {
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .why-benefits .advantage-card.reveal {
+    transition-delay: var(--why-delay, 0ms);
+  }
+
+  .why-benefits .advantage-card:nth-child(1) { --why-delay: 0ms; }
+  .why-benefits .advantage-card:nth-child(2) { --why-delay: 55ms; }
+  .why-benefits .advantage-card:nth-child(3) { --why-delay: 110ms; }
+  .why-benefits .advantage-card:nth-child(4) { --why-delay: 165ms; }
+
+  .services-grid .service-card.reveal.is-visible,
+  .why-benefits .advantage-card.reveal.is-visible,
+  .pricing-section .pricing-card.reveal.is-visible,
+  .pricing-section .pricing-custom.reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .services-grid .service-card,
+  .why-benefits .why-glass,
+  .pricing-section .pricing-glass {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .service-card__visual img,
+  .why-benefits .advantage-card__media img,
+  .pricing-workspace img,
+  .pricing-card__visual img,
+  .pricing-custom__visual img,
+  .about-media img {
+    transition: none !important;
+  }
+
+  .service-card__visual img.is-media-pending,
+  .why-benefits .advantage-card__media img.is-media-pending,
+  .pricing-workspace img.is-media-pending,
+  .pricing-card__visual img.is-media-pending,
+  .pricing-custom__visual img.is-media-pending,
+  .service-card__visual img.is-media-loaded,
+  .why-benefits .advantage-card__media img.is-media-loaded,
+  .pricing-workspace img.is-media-loaded,
+  .pricing-card__visual img.is-media-loaded,
+  .pricing-custom__visual img.is-media-loaded {
+    transition: opacity 600ms cubic-bezier(.22, 1, .36, 1), transform 600ms cubic-bezier(.22, 1, .36, 1) !important;
+  }
+
+  .service-card__visual img.is-media-pending,
+  .why-benefits .advantage-card__media img.is-media-pending,
+  .pricing-workspace img.is-media-pending,
+  .pricing-card__visual img.is-media-pending,
+  .pricing-custom__visual img.is-media-pending {
+    opacity: 0;
+    transform: translate3d(0, 4px, 0);
+  }
+
+  .about-media img.is-media-pending {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+    transition: opacity 700ms cubic-bezier(.22, 1, .36, 1), transform 700ms cubic-bezier(.22, 1, .36, 1) !important;
+  }
+
+  .service-card__visual img.is-media-loaded {
+    opacity: .7;
+  }
+
+  .pricing-custom__visual img.is-media-loaded {
+    opacity: .68;
+  }
+
+  .why-benefits .advantage-card__media img.is-media-loaded,
+  .pricing-workspace img.is-media-loaded,
+  .pricing-card__visual img.is-media-loaded {
+    opacity: 1;
+  }
+
+  .about-media img.is-media-loaded {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .service-card__visual img.is-media-loaded,
+  .why-benefits .advantage-card__media img.is-media-loaded,
+  .pricing-workspace img.is-media-loaded,
+  .pricing-card__visual img.is-media-loaded,
+  .pricing-custom__visual img.is-media-loaded {
+    transform: translate3d(0, 0, 0);
+  }
+
+  html.reveal-observer-active .about-media.reveal:not(.is-visible),
+  .about-media.reveal {
+    clip-path: none !important;
+    opacity: 1 !important;
+    transform: translate3d(var(--about-image-x), calc(var(--about-image-y) + var(--about-scroll-y)), 0) !important;
+    transition: none !important;
+    will-change: auto;
+  }
+
+  .services-grid .service-card:hover .service-card__visual img,
+  .why-benefits .advantage-card:hover .advantage-card__media img,
+  .pricing-section .pricing-card:hover .pricing-card__visual img {
+    transform: none;
+  }
+
+  .depth-plane .depth-particle:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  #hero-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(24px, 6.55vw, 28px);
+    letter-spacing: -.06em;
+    line-height: .91;
+  }
+
+  #hero-title .headline-line {
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  #why-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(27px, 7vw, 31px);
+    line-height: .95;
+  }
+
+  .why-grid .why-statement__lead,
+  .why-grid .why-statement p + p.why-statement__lead {
+    font-size: clamp(23px, 6.1vw, 28px);
+  }
+
+  .why-grid .why-statement__main,
+  .why-grid .why-statement p + p.why-statement__main {
+    font-size: clamp(31px, 8.2vw, 35px);
+    letter-spacing: -.06em;
+    line-height: .92;
+  }
+}
