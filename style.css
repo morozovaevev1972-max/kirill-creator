@@ -3787,6 +3787,7 @@ h1 {
   }
 
   .eye-tool-icons {
+    --orbit-center-y: 55.3%;
     --orbit-radius: clamp(30px, 9.5vw, 42px);
   }
 
